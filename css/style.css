@@ -1,0 +1,634 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none;
+
+}
+:root {
+  --pink:#ff046f ;
+  --violet:#c63bfa;
+}
+*::selection {
+  background-color:var(--pink) ;
+  color: white;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+.heading {
+  font-size: 4rem;
+  color: var(--pink);
+  text-align: center;
+  padding: 0 1rem ;
+  padding-top: 6rem;
+  letter-spacing: .2rem;
+  font-weight: 500;
+}
+.title {
+  font-size: 2rem;
+  padding: 0 1rem ;
+  text-align: center;
+  font-weight: 400;
+  color: #aaa;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+/*!-----------------------------------Start  Header */
+header {
+width: 96%;
+background-color: aliceblue;
+position: fixed;
+top: 2rem;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-radius: 5rem;
+padding: 1rem 2rem;
+z-index: 1000;
+transition: all 0.2s;
+}
+.header-active{
+  width: 100%;
+  top: 0;
+  border-radius: 0;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.349);
+}
+header .navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+header .navbar ul li {
+  margin: 0 1rem;
+}
+header .navbar ul li a {
+  font-size: 2rem;
+  color: var(--pink);
+  transition: color 0.3s;
+}
+header .navbar ul li a:hover {
+  color: var(--violet)
+}
+header .navbar ul li a.active { /*Home*/
+  color: var(--violet);
+}
+header .logo {
+  font-size: 2.5rem;
+  color: var(--violet);
+}
+header .logo i {
+  color: var(--pink);
+  padding: 0 0.2rem;
+}
+header .fa-bars {
+  font-size: 3rem;
+  color: var(--pink);
+  display: none;
+  transition: transform 0.2s;
+}
+header .fa-times {
+  transform: rotate(180deg);
+  color: var(--violet);
+}
+
+
+
+/* !--------------------------------------------------End  Header */
+
+
+
+/* ?--------------------------------------------------Start Home */
+
+.home {
+  min-height: 100vh;
+  background: linear-gradient(rgba(198,59,250,0.8),rgba(198,59,250,0.8)),
+  url(../image/Students\ watching\ webinar\ on\ computer.jpg) no-repeat;
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.home .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-top: 14rem;
+  padding-bottom: 8rem;
+  text-align: center;
+
+}
+.home .content h1 {
+  font-size: 5rem;
+  color: #fff;
+  padding:0  1rem ;
+  text-shadow: 0 .3rem 0.5rem rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+.home .content p{
+  font-size: 2rem;
+  color: #eee; 
+  padding: 1rem 25rem;
+}
+.home .content button {
+  height: 4rem;
+  width: 20rem;
+  border-radius: 5rem;
+  background-color: var(--pink);
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer; 
+  transition: all .2s;
+  border: none;
+  box-shadow: 0 .3rem 1rem rgba(0, 0, 0, 0.3);
+}
+.home .content button:hover {
+  letter-spacing: 0.2rem;
+}
+
+.home .box-container {
+  display: flex;
+  justify-content: center;
+  /* align-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.home .box-container .box {
+  height: 20rem;
+  width: 25rem;
+  background-color:#fff ;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow:0 0.3rem 0.5rem  rgba(0, 0, 0, 0.5);
+  margin:2rem;
+  cursor: pointer;
+}
+.home .box-container .box i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem 0;
+  border-radius: 50%;
+  color: #fff;
+  background-color: var(--violet);
+  transition: all .2s ;
+} 
+.home .box-container .box h3 {
+  font-size: 2rem;
+  padding: 0.7rem 2rem;
+  color: var(--pink);
+} 
+.home .box-container .box p {
+  font-size: 1.3rem;
+  padding: 0.7rem 2rem;
+  color: #666;
+} 
+.home .box-container .box:hover i{
+  background-color: var(--pink);
+}
+.home .box-container .box:hover h3{
+  color: var(--violet);
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  bottom: -25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 70vh solid #fff;
+  width: 120%;
+  border-radius: 50%;
+  z-index: -1;
+
+}
+
+
+/* ?--------------------------------------------------End Home */
+
+/* *--------------------------------------------------Start About */
+
+
+
+.about .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .row .content{
+  padding-left: 5rem;
+}
+.about .row .content h3 {
+  font-size: 3rem;
+  color: var(--pink);
+}
+.about .row .content p {
+  font-size: 1.6rem;
+  color: #999;padding: 1rem 0;
+}
+.about .row .content button {
+  border: none;
+  height: 3.5rem;
+  width: 17rem;
+  background-color: var(--violet);
+  color: #fff;
+  border-radius: 5rem;
+  font-size: 2rem;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.about .row .content button:hover {
+  letter-spacing: 0.2rem;
+  opacity: 0.8;
+}
+.about .row .image img {
+  height: 70vh;
+  width:50vw ;
+}
+/* ?--------------------------------------------------End About */
+
+
+/* !--------------------------------------------------Start teacher */
+.teacher {
+  background-color: #f9f9f9;
+
+}
+.teacher .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.teacher .card-container .card {
+  padding: 2rem;
+  margin: 2rem;
+  background-color: white;
+  text-align: center;
+  width: 28rem;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.teacher .card-container .card img {
+  /* box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3); */
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  filter: grayscale();
+  transition: all 0.2s;
+}
+.teacher .card-container .card:hover img {
+  filter: grayscale(0);
+}
+
+.teacher .card-container .card h3 {
+  color: var(--pink);
+  font-size: 2rem;
+  padding: 0.5rem 0;
+}
+.teacher .card-container .card p {
+  font-size: 1.7rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.teacher .card-container .card .icons a {
+  font-size: 1.9rem;
+  padding: 1.5rem 0.5rem;
+  color: var(--pink);
+  transition: all 0.2s;
+}
+.teacher .card-container .card .icons a:hover {
+  color: var(--violet);
+}
+/* !--------------------------------------------------End teacher */
+
+
+
+/* todo--------------------------------------------------start courses */
+.courses .box-container {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.courses .box-container .box{
+  height:20rem ;
+  width: 30rem;
+  margin: 3.5rem 2rem;
+  text-align: center;
+  box-shadow: 0.3rem 0.3rem 0 0.1rem var(--violet),
+              0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 2rem;
+
+}
+.courses .box-container .box i{
+  height: 10rem;
+  width: 10rem;
+  line-height: 8rem;
+  font-size: 3.5rem;
+  color: white;
+  border-radius: 50%;
+  background-color: var(--pink);
+  box-shadow: 0 0 0 1rem white inset;
+  margin-top: -4rem;
+  text-align: center;
+  border:  1rem solid white;
+  border-left: 1rem solid var(--pink);
+  border-right: 1rem solid var(--pink);
+}
+.courses .box-container .box h3{
+  font-size: 2.5rem;
+  color: var(--violet);
+
+}
+.courses .box-container .box p{
+  font-size: 1.7rem;
+  color: #999;
+  padding: 1rem 0 ;
+}
+
+/* todo--------------------------------------------------End courses */
+/* ?--------------------------------------------------start review */
+.review .box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.review .box-container .box {
+  width: 28rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0 .3rem 0.5rem rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin: 4rem 2rem;
+}
+
+.review .box-container .box img {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -4rem;
+  border: .6rem solid var(--pink);
+  border-left: .6rem solid var(--violet);
+  border-bottom: .6rem solid var(--violet);
+}
+.review .box-container .box h3{
+  font-size: 2rem;
+  color: var(--pink);
+  padding: 0 .5rem;
+}
+.review .box-container .box p{
+  font-size: 1.4rem;
+  color: #999;
+  padding: 1.2rem 4.2rem;
+
+}
+.review .box-container .box i {
+  color: #ffc107;
+  font-size: 1.4rem;
+  padding:  1.3rem 0.1rem;
+}
+
+/* ?--------------------------------------------------End review */
+
+
+
+
+/* ?--------------------------------------------------start contact */
+
+.contact {
+  background-color: #333;
+
+
+}
+.contact .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  width: 85%;
+  margin: 0 auto;
+}
+.contact .row .image img {
+width: 50vw;
+height: 70vh;
+}
+.contact .row .form-container {
+  width: 50%;
+  padding-right: 6rem;
+
+}
+.contact .row .form-container input, textarea {
+  height: 5rem;
+  width: 100%;
+  background-color: #fff;
+  border: 0;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: var(--pink);
+  font-size: 1.7rem;
+  margin-left: 4rem;
+}
+.contact .row .form-container input:focus, textarea:focus  {
+  border: 0.2rem solid var(--pink );
+}
+.contact .row .form-container input[type="submit"] {
+  width: 17rem;
+  background-color: var(--pink);
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: all 0.2s;
+}
+.contact .row .form-container input[type="submit"]:hover{
+  background-color: transparent;
+  color: var(--pink);
+  border: .2rem solid var(--pink);
+}
+.contact .row .form-container textarea {
+  height: 20rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  resize: none;
+}
+/* ?--------------------------------------------------End contact */
+
+
+/* ?--------------------------------------------------start footer */
+
+.footer {
+  text-align: center;
+}
+
+.footer .icons {
+  padding: 2rem 0;
+
+}
+.footer .icons a i {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.2rem;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--violet);
+  border: 0.2rem solid var(--violet);
+  font-size: 2rem;
+  margin: 0 1.1rem;
+  transition: all .2s linear ;
+}
+
+.footer .icons a i:hover {
+  color: white;
+  background-color: var(--pink);
+  border-color: var(--pink);
+}
+.footer .credit {
+font-size: 2.4rem;
+border-top: 0.1rem solid #999;
+margin: 0 auto;
+margin-bottom: 2rem;
+color: #666;
+width: 90%;
+padding: 1rem 0;
+}
+.footer .credit span {
+  color: var(--pink);
+}
+
+/* ?--------------------------------------------------End footer */
+
+
+
+
+
+
+@media (max-width: 768px){
+  html {
+    font-size: 55%;
+    
+  }
+  /*Start Media Header */
+  header .fa-bars {
+    display: block;
+  }
+  header .navbar {
+    position: fixed;
+    top: -100rem;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: all .2s linear;
+  }
+  header .navbar ul {
+    flex-flow: column;
+    padding: 2rem 0;
+  }
+  header .navbar ul li {
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  header .navbar ul li a {
+    font-size: 3rem;
+    display: block;
+  }
+  header .nav-toggle {
+    top: 5.5rem;
+    opacity: 1;
+  }
+  /* End Media Header */
+
+
+  /* start Media Home */
+  .home .content p {
+    padding: 1.5rem 2rem;
+  }
+  .home::before {
+    display: none;
+  }
+
+  /* End Media Home */
+  /* start Media about */
+  .about .row {
+    flex-flow: column-reverse;
+  }
+  .about .row .image img {
+    height: 60vh;
+    width: 90vw;
+  }
+  .about .row .content {
+    padding: 0 2.5rem;
+  }
+
+.courses .box-container {
+  width: 100%;
+  }
+  .courses .box-container .box {
+    height: 25rem;
+    width: 25rem;
+  }
+  .courses .box-container .box p{
+    font-size: 1.7rem;
+    line-height: 2;
+  }
+  .courses .box-container .box h3{
+    font-size: 2.5rem;
+  }
+  .review .box-container .box {
+    width: 22rem;
+  }
+  .contact .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact .row .image img {
+    width: 100%;
+    height: 30vh;
+}
+.contact .row .form-container {
+  width: 90%;
+  padding:0;
+}
+.contact .row .form-container input, textarea {
+  margin-left:0 ;
+}
+
+.footer .icons a i {
+  height: 3.5rem;
+  width: 3.5rem;
+  line-height: 3.2rem;
+  font-size: 1.7rem;
+}
+  /* End Media about */
+}
